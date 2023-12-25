@@ -23,7 +23,7 @@ dependencies {
 	implementation (
 			'org.springframework.boot:spring-boot-starter-thymeleaf',
 			'org.springframework.boot:spring-boot-starter-web',
-			'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3',
+			'org.springframework.boot:spring-boot-starter-jdbc',
 			'org.modelmapper:modelmapper:3.1.1'
 	)
 
