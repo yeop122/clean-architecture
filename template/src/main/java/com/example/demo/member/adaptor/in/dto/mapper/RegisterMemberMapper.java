@@ -1,4 +1,4 @@
-package com.example.demo.member.adaptor.in.web;
+package com.example.demo.member.adaptor.in.dto.mapper;
 
 import com.example.demo.member.adaptor.in.dto.RegisterMemberRequest;
 import com.example.demo.member.domain.Member;

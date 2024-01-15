@@ -1,7 +1,8 @@
 package com.example.demo.member.application.service;
 
 import com.example.demo.member.application.port.in.MemberUseCase;
-import com.example.demo.member.application.port.out.MemberPort;
+import com.example.demo.member.application.port.out.MemberJdbcPort;
+import com.example.demo.member.application.port.out.MemberJpaPort;
 import com.example.demo.member.domain.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,12 +14,16 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class MemberService implements MemberUseCase {
 
-    private final MemberPort memberPort;
+    private final MemberJpaPort memberJpaPort;
+    private final MemberJdbcPort memberJdbcPort;
 
     @Override
     @Transactional
     public Member registerMember(Member member) {
 
-        return memberPort.save(member);
+//        memberJdbcPort.save(member);
+//        return null;
+
+        return memberJpaPort.save(member);
     }
 }

@@ -2,7 +2,7 @@ package com.example.demo.member.application.port.out;
 
 import com.example.demo.member.domain.Member;
 
-public interface MemberPort {
+public interface MemberJdbcPort {
 
-    Member save(Member member);
+    int save(Member member);
 }
